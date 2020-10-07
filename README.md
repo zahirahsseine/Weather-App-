@@ -4,8 +4,10 @@ This mobile app is a simple tutorial for beginner to training in react native, i
 
 
 ## Step 1:Create react native project:
-   for creating project , open in CLI you use: cmd, powershell or bash for github and tab command line:
+   for creating project , open any CLI you use: cmd, powershell or bash for github and tab command line:
+   
     npx react-native init WeatherApp
+    
 ## Step 2:Create pages:
    We will create some pages needed:
    
