@@ -46,29 +46,34 @@ This mobile app is a simple tutorial for beginner to training in react native, i
      
     # Second Page name :"List.js"
      this page will listing the weather of 7 days. We will setup the list in next steps
+     
 ## Step 3:Create tab bottom navigation:
-    Open the project created using vs code or you can use any EDI , then you can start now to enjoy in coding :
-    # 1-Setting up:
-      for setting up the navigation system in your app, you have to install the api @react-navigation/native:
+
+  Open the project created using vs code or you can use any EDI , then you can start now to enjoy in coding :
+  
+  # 1-Setting up:
+   for setting up the navigation system in your app, you have to install the api @react-navigation/native:
       
       npm install @react-navigation/native
       and you have to install also other dependencies:
       
-      npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+      npm install react-native-reanimated react-native-gesture-handler react-native-screens 
+      react-native-safe-area-context @react-native-community/masked-view
       npm install @react-navigation/bottom-tabs
       
-      for more information about this api you can go to:https://reactnavigation.org/docs/getting-started
+   for more information about this api you can go to:https://reactnavigation.org/docs/getting-started
       
-    # 2-Import the librairy:
+  # 2-Import the librairy:
      
      import { NavigationContainer } from '@react-navigation/native'
      import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
      
-    # 3-Create the tab bottom navigator:
+  # 3-Create the tab bottom navigator:
          
-     -Create constant: const Tab = createBottomTabNavigator();
-     -Configure Tab:
-     <NavigationContainer>
+   -Create constant: const Tab = createBottomTabNavigator();
+   -Configure Tab:
+   
+       <NavigationContainer>
                      <Tab.Navigator
                       screenOptions={({ route }) => ({
                        tabBarIcon: ({ focused, color, size }) => {
@@ -107,15 +112,20 @@ This mobile app is a simple tutorial for beginner to training in react native, i
                    </NavigationContainer>
      
 ## Step 3: Connect to your api for getting data:
-       Now, it's time to connect to api for retreiving data, we using for that https://openweathermap.org/ , we have using the free plan, this plan offer the possibilty to get data by position so for using the name of city, you have to switch to another plan.
-       For getting a current position of user , we will use install librairy:
+
+   Now, it's time to connect to api for retreiving data, we using for that https://openweathermap.org/ , we have using the free plan, this plan offer the possibilty to get data by position so for using the name of city, you have to switch to another plan. For getting a current position of user , we will use install librairy:
        
-       ## Get Location:
-           1- Install react-native-get-location:
+   ### Get Location:
+   
+   1- Install react-native-get-location:
+   
                 npm install react-native-get-location
-           2- import librairy:
+                
+   2- import librairy:
+   
                import GetLocation from 'react-native-get-location'
-           3- Now, we can get position :
+               
+   3- Now, we can get position :
            
               await  GetLocation.getCurrentPosition({
                    enableHighAccuracy: true,
@@ -129,10 +139,12 @@ This mobile app is a simple tutorial for beginner to training in react native, i
                    const { code, message } = error;
                    console.warn(code, message);
                })
-         ##Get Weather:
-           1- First, Subscribe in free plan of the api https://openweathermap.org/ ,then get you key.
-           2- Fetch data you have more choices to do that , we will  use fetch for our example, we have create a function that's required two 
+   ### Get Weather:
+   1- First, Subscribe in free plan of the api https://openweathermap.org/ ,then get you key.
+   
+   2- Fetch data you have more choices to do that , we will  use fetch for our example, we have create a function that's required two 
            parameters(latitue,longitude):
+           
             fetchWeatherData(lat,lng)
              {
                  fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lng+"&units=metric&dt=1601892480&appid=YourKey")
@@ -151,9 +163,9 @@ This mobile app is a simple tutorial for beginner to training in react native, i
         
 ## Step 4:Create a list of items:
 
-       Finaly, After retreiving data, you have to settup our list :
+  Finaly, After retreiving data, you have to settup our list :
        
-       Create component item, it has three props: degree value, date and icon that illustrate the state of the weather, this is the code:
+   -Create component item, it has three props: degree value, date and icon that illustrate the state of the weather, this is the code:
        
          import React from 'react'
          import {View,Text,StyleSheet,Image} from 'react-native'
@@ -301,7 +313,7 @@ This mobile app is a simple tutorial for beginner to training in react native, i
 
          })
          
-         Now, we can setting the list:
+   -Now, we can setting the list:
          
                 <FlatList
                   data={this.state.report.daily}
@@ -309,5 +321,5 @@ This mobile app is a simple tutorial for beginner to training in react native, i
                   keyExtractor={(renderData)=>{renderData.dt}}
                 />
                 
-         This is the final result of app :)
+  -This is the final result of app :)
          
