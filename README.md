@@ -7,7 +7,10 @@ This mobile app is a simple tutorial for beginner to training in react native, i
    for creating project , open in CLI you use: cmd, powershell or bash for github and tab command line:
     npx react-native init WeatherApp
 ## Step 2:Create pages:
-   # First page named :"About.js"
+   We will create some pages needed:
+   
+     ##### First page named "About.js":
+  
      this page will contained small descrition of app.
      
       import React from 'react'
@@ -41,7 +44,7 @@ This mobile app is a simple tutorial for beginner to training in react native, i
 
 
      
-   # Second Page name :"List.js"
+    ##### Second Page name :"List.js"
      this page will listing the weather of 7 days. We will setup the list in next steps
 ## Step 3:Create tab bottom navigation:
     Open the project created using vs code or you can use any EDI , then you can start now to enjoy in coding :
