@@ -51,7 +51,8 @@ This mobile app is a simple tutorial for beginner to training in react native, i
 
   Open the project created using vs code or you can use any EDI , then you can start now to enjoy in coding :
   
-  # 1-Setting up:
+  ### 1-Setting up:
+  
    for setting up the navigation system in your app, you have to install the api @react-navigation/native:
       
       npm install @react-navigation/native
@@ -63,12 +64,12 @@ This mobile app is a simple tutorial for beginner to training in react native, i
       
    for more information about this api you can go to:https://reactnavigation.org/docs/getting-started
       
-  # 2-Import the librairy:
+  ### 2-Import the librairy:
      
      import { NavigationContainer } from '@react-navigation/native'
      import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
      
-  # 3-Create the tab bottom navigator:
+  ### 3-Create the tab bottom navigator:
          
    -Create constant: const Tab = createBottomTabNavigator();
    -Configure Tab:
