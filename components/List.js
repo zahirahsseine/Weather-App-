@@ -38,7 +38,7 @@ export default class List extends React.Component
     }
      fetchWeatherData(lat,lng)
     {
-        fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lng+"&units=metric&dt=1601892480&appid=45fab4e7ad31982d297b7bee33839c8d")
+        fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lng+"&units=metric&dt=1601892480&appid={Your Key}")
         .then((response) => response.json())
         .then((json) => {
             
