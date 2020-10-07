@@ -112,7 +112,7 @@ This mobile app is a simple tutorial for beginner to training in react native, i
                      </Tab.Navigator>
                    </NavigationContainer>
      
-## Step 3: Connect to your api for getting data:
+## Step 4: Connect to your api for getting data:
 
    Now, it's time to connect to api for retreiving data, we using for that https://openweathermap.org/ , we have using the free plan, this plan offer the possibilty to get data by position so for using the name of city, you have to switch to another plan. For getting a current position of user , we will use install librairy:
        
@@ -162,7 +162,7 @@ This mobile app is a simple tutorial for beginner to training in react native, i
           
                  
         
-## Step 4:Create a list of items:
+## Step 5:Create a list of items:
 
   Finaly, After retreiving data, you have to settup our list :
        
@@ -324,3 +324,5 @@ This mobile app is a simple tutorial for beginner to training in react native, i
                 
   ### This is the final result of app :)
    <image  src="https://github.com/zahirahsseine/Weather-App-/blob/main/Screenshot_2020-10-07-16-01-31.png"></image>
+   
+   I hope this can help you, please if you have any recommendation give me your feedback.
